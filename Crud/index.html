@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Agregar, Eliminar y Actualizar</title>
+  <script type="module" src="script.js"></script>
+  
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Productos - Agregar, Eliminar, Enlistar y Actualizar</h1>
+
+    <!-- Formulario para agregar un producto -->
+    <h2>Agregar Producto</h2>
+    <form id="formAgregarProducto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required><br><br>
+
+      <label for="categoria">Categoría:</label>
+      <input type="text" id="categoria" required><br><br>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" step="0.01" required><br><br>
+
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" required><br><br>
+
+      <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h2>Lista de Productos</h2>
+    <table border="1" cellspacing="0" cellpadding="8">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaProductos">
+        <!-- Aquí se mostrarán los productos desde Firebase -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
